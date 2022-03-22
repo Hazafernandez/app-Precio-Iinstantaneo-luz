@@ -70,15 +70,15 @@ const handleCalcularButtonClick = async () => {
     if (arraySumada == 0) {
       alert("Por favor, seleccione un electrodoméstico");
     } else {
-      precioTotal.textContent =(
+    /*   precioTotal.textContent = */ alert(
         "Consumo total según elementos seleccionados : " + condecimales + "€/h"
         );
       desglose.textContent = "";
       for (let i = 0; i < array5.length; i++) {
      
-        desglose.textContent += `\n Consumo ${array5[i]}: ${aparatoIndividual[
+        /* desglose.textContent */ alert( /* += */ `\n Consumo ${array5[i]}: ${aparatoIndividual[
           i
-        ].toFixed(2)} €/h`;
+        ].toFixed(2)} €/h`);
       }
       }
   } catch (error) {
