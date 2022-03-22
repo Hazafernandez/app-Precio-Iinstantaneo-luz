@@ -11,6 +11,7 @@ async function getPrice() {
     console.log("Pasaron 5 minutos?");
     if (resta < 5) {
       price = datosConsulta.precio;
+    
       console.log("No, voy leer los datos desde localStorage");
     }
   }
@@ -54,6 +55,7 @@ const handleCalcularButtonClick = async () => {
     });
     const precioTotal = document.querySelector("#precioTotal");
     const desglose = document.querySelector("#desglose");
+    const precioActual = document.querySelector("#precioActual");
     let array2 = [];
     let arrayValoresNum = array.forEach((elemento) => {
       array2.push(Number(elemento));
@@ -70,8 +72,9 @@ const handleCalcularButtonClick = async () => {
     if (arraySumada == 0) {
       alert("Por favor, seleccione un electrodoméstico");
     } else {
+      alert("el precio actual en este momento es de: "+ price + "€ el MW/H")
     /*   precioTotal.textContent = */ alert(
-        "Consumo total según elementos seleccionados : " + condecimales + "€/h"
+        "Consumo total según los elementos seleccionados : " + condecimales + "€/h"
         );
       desglose.textContent = "";
       for (let i = 0; i < array5.length; i++) {
